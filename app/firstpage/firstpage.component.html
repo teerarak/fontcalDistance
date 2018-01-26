@@ -1,0 +1,24 @@
+<StackLayout horizontalAlignment="center">
+    <Label class="h2 p-15" text="คำนวนระยะทางระหว่างอำเภอ"></Label>
+    <TextField hint="กรุณากรอก ชื่ออำเภอที่หนึ่ง"
+        [(ngModel)]="data.firstAmphur"
+        secure="false"
+        returnKeyType="done" 
+        (returnPress)="onReturnPress($event)"
+        autocorrect="false"
+        (focus)="onFocus($event)" 
+        (blur)="onBlur($event)" 
+        class="input input-border"
+        ></TextField>
+
+        <TextField hint="กรุณากรอก ชื่ออำเภอที่สอง"
+        [(ngModel)]="data.secondAmphur"
+        secure="false"
+        returnKeyType="done" 
+        (returnPress)="onReturnPress($event)"
+        autocorrect="false"
+        (focus)="onFocus($event)" 
+        (blur)="onBlur($event)" 
+        class="input input-border"></TextField>
+        <button text="คำนวน" class="btn btn-primary btn-active p-5 m-5" (tap)="sendData()" ></button>
+</StackLayout>
