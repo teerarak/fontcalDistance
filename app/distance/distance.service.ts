@@ -10,7 +10,7 @@ export class DistanceService {
         private router: Router
     ) { }
     calDistance(model: any): Observable<any> {
-        let apiUrl = "http://192.168.43.166:3000/api";
+        let apiUrl = "https://us-central1-maphomework-1492870415908.cloudfunctions.net/eiei/api";
         let headers = new Headers();
         headers.append("Content-Type", "application/json");
 

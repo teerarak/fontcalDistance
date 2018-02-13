@@ -47,12 +47,15 @@ export class DistanceComponent implements OnInit {
         console.log(this.data.firstAmphur)
         this.distanceFunc();
     }
+    back() {
+        this.router.navigate(['/']);
+    }
     distanceFunc (){
         this.distanceService.calDistance(this.data)
         .subscribe(
             (Response) => {
                 // console.log(JSON.stringify(Response));
-                this.distance = this.setNumberFormat(Response / 1000);
+                this.distance = this.setNumberFormat(Response.distance / 1000);
                 this.loader.hide();
             },
             (error) => {
