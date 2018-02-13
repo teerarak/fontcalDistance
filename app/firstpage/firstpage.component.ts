@@ -11,9 +11,13 @@ import { ActivatedRoute, Router, UrlSegment } from "@angular/router";
 })
 
 export class FirstpageComponent {
+    // data = {
+    //     firstAmphur: "หนองจอก",
+    //     secondAmphur: "พระนคร"
+    // };
     data = {
-        firstAmphur: "หนองจอก",
-        secondAmphur: "พระนคร"
+        firstAmphur: "",
+        secondAmphur: ""
     };
     constructor(
         // private http: Http,
